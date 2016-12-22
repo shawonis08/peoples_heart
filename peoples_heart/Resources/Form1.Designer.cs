@@ -44,8 +44,6 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.ConfirmButton);
-            this.metroPanel1.Controls.Add(this.CancelButton);
             this.metroPanel1.Controls.Add(this.ConfirmPinInput);
             this.metroPanel1.Controls.Add(this.RequestPinInput);
             this.metroPanel1.Controls.Add(this.PatientAgeInput);
@@ -57,9 +55,9 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(33, 63);
+            this.metroPanel1.Location = new System.Drawing.Point(33, 74);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(872, 390);
+            this.metroPanel1.Size = new System.Drawing.Size(857, 276);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -70,7 +68,7 @@
             this.PatientName.AutoSize = true;
             this.PatientName.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.PatientName.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.PatientName.Location = new System.Drawing.Point(121, 58);
+            this.PatientName.Location = new System.Drawing.Point(113, 45);
             this.PatientName.Name = "PatientName";
             this.PatientName.Size = new System.Drawing.Size(125, 25);
             this.PatientName.TabIndex = 2;
@@ -83,7 +81,7 @@
             this.PatientAge.AutoSize = true;
             this.PatientAge.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.PatientAge.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.PatientAge.Location = new System.Drawing.Point(121, 111);
+            this.PatientAge.Location = new System.Drawing.Point(113, 98);
             this.PatientAge.Name = "PatientAge";
             this.PatientAge.Size = new System.Drawing.Size(108, 25);
             this.PatientAge.TabIndex = 3;
@@ -94,7 +92,7 @@
             this.RequestPin.AutoSize = true;
             this.RequestPin.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.RequestPin.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.RequestPin.Location = new System.Drawing.Point(121, 160);
+            this.RequestPin.Location = new System.Drawing.Point(113, 147);
             this.RequestPin.Name = "RequestPin";
             this.RequestPin.Size = new System.Drawing.Size(113, 25);
             this.RequestPin.TabIndex = 4;
@@ -106,7 +104,7 @@
             this.ConfirmPin.AutoSize = true;
             this.ConfirmPin.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.ConfirmPin.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.ConfirmPin.Location = new System.Drawing.Point(121, 216);
+            this.ConfirmPin.Location = new System.Drawing.Point(113, 203);
             this.ConfirmPin.Name = "ConfirmPin";
             this.ConfirmPin.Size = new System.Drawing.Size(115, 25);
             this.ConfirmPin.TabIndex = 5;
@@ -128,7 +126,7 @@
             this.PatientNameInput.CustomButton.UseSelectable = true;
             this.PatientNameInput.CustomButton.Visible = false;
             this.PatientNameInput.Lines = new string[0];
-            this.PatientNameInput.Location = new System.Drawing.Point(313, 59);
+            this.PatientNameInput.Location = new System.Drawing.Point(305, 46);
             this.PatientNameInput.MaxLength = 32767;
             this.PatientNameInput.Name = "PatientNameInput";
             this.PatientNameInput.PasswordChar = '\0';
@@ -158,7 +156,7 @@
             this.PatientAgeInput.CustomButton.UseSelectable = true;
             this.PatientAgeInput.CustomButton.Visible = false;
             this.PatientAgeInput.Lines = new string[0];
-            this.PatientAgeInput.Location = new System.Drawing.Point(313, 112);
+            this.PatientAgeInput.Location = new System.Drawing.Point(305, 99);
             this.PatientAgeInput.MaxLength = 32767;
             this.PatientAgeInput.Name = "PatientAgeInput";
             this.PatientAgeInput.PasswordChar = '\0';
@@ -188,7 +186,7 @@
             this.RequestPinInput.CustomButton.UseSelectable = true;
             this.RequestPinInput.CustomButton.Visible = false;
             this.RequestPinInput.Lines = new string[0];
-            this.RequestPinInput.Location = new System.Drawing.Point(313, 161);
+            this.RequestPinInput.Location = new System.Drawing.Point(305, 148);
             this.RequestPinInput.MaxLength = 32767;
             this.RequestPinInput.Name = "RequestPinInput";
             this.RequestPinInput.PasswordChar = '\0';
@@ -218,7 +216,7 @@
             this.ConfirmPinInput.CustomButton.UseSelectable = true;
             this.ConfirmPinInput.CustomButton.Visible = false;
             this.ConfirmPinInput.Lines = new string[0];
-            this.ConfirmPinInput.Location = new System.Drawing.Point(313, 217);
+            this.ConfirmPinInput.Location = new System.Drawing.Point(305, 204);
             this.ConfirmPinInput.MaxLength = 32767;
             this.ConfirmPinInput.Name = "ConfirmPinInput";
             this.ConfirmPinInput.PasswordChar = '\0';
@@ -236,7 +234,7 @@
             // CancelButton
             // 
             this.CancelButton.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.CancelButton.Location = new System.Drawing.Point(496, 292);
+            this.CancelButton.Location = new System.Drawing.Point(529, 384);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(135, 41);
             this.CancelButton.TabIndex = 10;
@@ -246,7 +244,7 @@
             // ConfirmButton
             // 
             this.ConfirmButton.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.ConfirmButton.Location = new System.Drawing.Point(221, 292);
+            this.ConfirmButton.Location = new System.Drawing.Point(244, 384);
             this.ConfirmButton.Name = "ConfirmButton";
             this.ConfirmButton.Size = new System.Drawing.Size(146, 41);
             this.ConfirmButton.TabIndex = 11;
@@ -258,6 +256,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 476);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.ConfirmButton);
             this.Controls.Add(this.metroPanel1);
             this.Name = "Form1";
             this.Text = "Register";

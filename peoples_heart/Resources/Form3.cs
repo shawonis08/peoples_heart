@@ -21,5 +21,10 @@ namespace peoples_heart.Resources
         {
 
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

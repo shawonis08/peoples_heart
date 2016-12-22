@@ -21,5 +21,30 @@ namespace peoples_heart.Resources
         {
 
         }
+
+        private void EndDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MedicineNo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfirmButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
