@@ -1,6 +1,6 @@
 ﻿namespace peoples_heart.Resources
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -50,16 +50,6 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroButton1
-            // 
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.Location = new System.Drawing.Point(61, 56);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(241, 81);
-            this.metroButton1.TabIndex = 2;
-            this.metroButton1.Text = "Register";
-            this.metroButton1.UseSelectable = true;
-            // 
             // metroButton2
             // 
             this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
@@ -69,6 +59,16 @@
             this.metroButton2.TabIndex = 3;
             this.metroButton2.Text = "Log In";
             this.metroButton2.UseSelectable = true;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton1.Location = new System.Drawing.Point(61, 56);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(241, 81);
+            this.metroButton1.TabIndex = 2;
+            this.metroButton1.Text = "Register";
+            this.metroButton1.UseSelectable = true;
             // 
             // metroPanel2
             // 

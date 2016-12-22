@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace peoples_heart.Resources
+namespace peoples_heart
 {
-    public partial class Form3 : MetroFramework.Forms.MetroForm
+    public partial class Form6 : MetroFramework.Forms.MetroForm
     {
-        public Form3()
+        public Form6()
         {
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void Form6_Load(object sender, EventArgs e)
         {
 
         }

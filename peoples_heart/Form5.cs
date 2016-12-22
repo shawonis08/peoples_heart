@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace peoples_heart.Resources
 {
-    public partial class Form4 : MetroFramework.Forms.MetroForm
+    public partial class Form5 : MetroFramework.Forms.MetroForm
     {
-        public Form4()
+        public Form5()
         {
             InitializeComponent();
         }
