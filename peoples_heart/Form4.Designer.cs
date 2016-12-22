@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.NewButton = new MetroFramework.Controls.MetroButton();
             this.ExistingButton = new MetroFramework.Controls.MetroButton();
+            this.NewButton = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,44 +40,50 @@
             this.metroPanel1.Controls.Add(this.NewButton);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(199, 101);
+            this.metroPanel1.HorizontalScrollbarSize = 8;
+            this.metroPanel1.Location = new System.Drawing.Point(149, 82);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(545, 282);
+            this.metroPanel1.Size = new System.Drawing.Size(409, 229);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // NewButton
-            // 
-            this.NewButton.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.NewButton.Location = new System.Drawing.Point(171, 74);
-            this.NewButton.Name = "NewButton";
-            this.NewButton.Size = new System.Drawing.Size(212, 49);
-            this.NewButton.TabIndex = 2;
-            this.NewButton.Text = "New";
-            this.NewButton.UseSelectable = true;
+            this.metroPanel1.VerticalScrollbarSize = 8;
             // 
             // ExistingButton
             // 
             this.ExistingButton.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.ExistingButton.Location = new System.Drawing.Point(171, 156);
+            this.ExistingButton.Location = new System.Drawing.Point(128, 127);
+            this.ExistingButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ExistingButton.Name = "ExistingButton";
-            this.ExistingButton.Size = new System.Drawing.Size(212, 46);
+            this.ExistingButton.Size = new System.Drawing.Size(159, 37);
             this.ExistingButton.TabIndex = 3;
             this.ExistingButton.Text = "Existing";
             this.ExistingButton.UseSelectable = true;
             this.ExistingButton.Click += new System.EventHandler(this.metroButton2_Click);
             // 
-            // Form3
+            // NewButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.NewButton.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.NewButton.Location = new System.Drawing.Point(128, 60);
+            this.NewButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NewButton.Name = "NewButton";
+            this.NewButton.Size = new System.Drawing.Size(159, 40);
+            this.NewButton.TabIndex = 2;
+            this.NewButton.Text = "New";
+            this.NewButton.UseSelectable = true;
+            this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
+            // 
+            // Form4
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 476);
+            this.ClientSize = new System.Drawing.Size(696, 387);
             this.Controls.Add(this.metroPanel1);
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Name = "Form3";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Form4";
+            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "People\'s Heart";
             this.Load += new System.EventHandler(this.Form3_Load);

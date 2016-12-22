@@ -59,6 +59,7 @@
             this.metroButton2.TabIndex = 3;
             this.metroButton2.Text = "Log In";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroButton1
             // 
@@ -69,6 +70,7 @@
             this.metroButton1.TabIndex = 2;
             this.metroButton1.Text = "Register";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
             // metroPanel2
             // 
@@ -87,7 +89,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 476);
             this.Controls.Add(this.metroPanel2);

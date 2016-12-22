@@ -7,19 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Context;
 
 namespace peoples_heart
 {
-    public partial class Form6 : MetroFramework.Forms.MetroForm
+    public partial class ExistingMedicine : Form
     {
-        public Form6()
+        public ExistingMedicine()
         {
             InitializeComponent();
-        }
-
-        private void Form6_Load(object sender, EventArgs e)
-        {
-
+            metroGrid1.DataSource=new MedicineContext().GetMedicineS();
         }
     }
 }

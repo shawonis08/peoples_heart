@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peoples_heart", "peoples_heart\peoples_heart.csproj", "{96221134-67B5-4AB2-B900-751C06DFCF9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{4F8FCD69-426D-4916-A34C-F20BD79A2536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Context", "Context\Context.csproj", "{CFB6C598-B3EE-43C5-BE3B-0D12576352CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{96221134-67B5-4AB2-B900-751C06DFCF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96221134-67B5-4AB2-B900-751C06DFCF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96221134-67B5-4AB2-B900-751C06DFCF9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F8FCD69-426D-4916-A34C-F20BD79A2536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8FCD69-426D-4916-A34C-F20BD79A2536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8FCD69-426D-4916-A34C-F20BD79A2536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F8FCD69-426D-4916-A34C-F20BD79A2536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB6C598-B3EE-43C5-BE3B-0D12576352CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB6C598-B3EE-43C5-BE3B-0D12576352CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB6C598-B3EE-43C5-BE3B-0D12576352CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB6C598-B3EE-43C5-BE3B-0D12576352CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
