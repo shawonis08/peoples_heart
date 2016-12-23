@@ -15,56 +15,41 @@ namespace peoples_heart.Resources
 {
     public partial class Form4 : MetroFramework.Forms.MetroForm
     {
-        
-        private Timer[] Alarms;
+        private List<Medicine> medicines;
+        private Timer Alarm;
         private Patient patient;
         private Form1 form1;
         public Form4(Patient validUser, Form1 form1)
         {
 
             this.form1 = form1;
-            patient = validUser;
-
-
-
-            Medicine[] medicines = new MedicineContext().GetMedicinesByUid(patient.Id).ToArray();
-            int medCount = medicines.Length;
-            Alarms = new Timer[medCount];
-            for (int i = 0; i < medCount; i++)
-            {
-                Alarms[i] = new Timer { Interval = 10000 };
-                var i1 = i;
-                Alarms[i].Tick += (sender, e) => AlarmEvent(sender, e, medicines[i1]);
-                Alarms[i].Enabled = true;
-                Alarms[i].Start();
-            }
-
-
-
-
+            patient = validUser; 
             InitializeComponent();
+            medicines =new MedicineContext().GetMedicinesByUid(patient.Id);
+            Alarm = new Timer {Interval = 1000};
+            Alarm.Tick += Alarm_Tick;
+            Alarm.Start();
+
+
         }
 
-     
-        private void AlarmEvent(object sender, EventArgs eventArgs, Medicine  medicine)
+        private void Alarm_Tick(object sender, EventArgs e)
         {
-           
             DateTime now= DateTime.Now;
-            DateTime startDate = medicine.StartDate;
-            DateTime endDate = medicine.EndDate;
-            if (now>= startDate && now >= endDate)//inRange
+         
+            foreach (var medicine in medicines)
             {
-                if (now.Hour%medicine.Interval==0)
+                DateTime startDate = medicine.StartDate;
+                DateTime endDate = medicine.EndDate;
+                if (now < startDate || now > endDate) continue;
+                if (now.Minute==0 && now.Hour%medicine.Interval == 0)
                 {
-                    MessageBox.Show(@"Time to Take "+medicine.Name);
-                  
+                    MessageBox.Show("Time for" + medicine.Name);
                 }
             }
 
 
-
         }
-
 
         private void Form3_Load(object sender, EventArgs e)
         {
