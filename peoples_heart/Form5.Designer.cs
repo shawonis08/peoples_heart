@@ -32,6 +32,8 @@
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.TakingTimeInput = new MetroFramework.Controls.MetroTextBox();
             this.TakingTime = new MetroFramework.Controls.MetroLabel();
+            this.BeforeMeal = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.MedicineNameInput = new MetroFramework.Controls.MetroTextBox();
@@ -42,8 +44,6 @@
             this.NoOfMedicine = new MetroFramework.Controls.MetroLabel();
             this.CancelButton = new MetroFramework.Controls.MetroButton();
             this.AddNewButton = new MetroFramework.Controls.MetroButton();
-            this.BeforeMeal = new MetroFramework.Controls.MetroCheckBox();
-            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 8;
             this.metroPanel1.Location = new System.Drawing.Point(24, 63);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(634, 224);
             this.metroPanel1.TabIndex = 0;
@@ -79,7 +79,7 @@
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
             this.metroComboBox1.Location = new System.Drawing.Point(352, 123);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(86, 29);
             this.metroComboBox1.TabIndex = 18;
@@ -91,10 +91,10 @@
             // 
             // 
             this.TakingTimeInput.CustomButton.Image = null;
-            this.TakingTimeInput.CustomButton.Location = new System.Drawing.Point(92, 1);
-            this.TakingTimeInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TakingTimeInput.CustomButton.Location = new System.Drawing.Point(123, 1);
+            this.TakingTimeInput.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.TakingTimeInput.CustomButton.Name = "";
-            this.TakingTimeInput.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.TakingTimeInput.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.TakingTimeInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TakingTimeInput.CustomButton.TabIndex = 1;
             this.TakingTimeInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -102,7 +102,7 @@
             this.TakingTimeInput.CustomButton.Visible = false;
             this.TakingTimeInput.Lines = new string[0];
             this.TakingTimeInput.Location = new System.Drawing.Point(196, 129);
-            this.TakingTimeInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TakingTimeInput.Margin = new System.Windows.Forms.Padding(2);
             this.TakingTimeInput.MaxLength = 32767;
             this.TakingTimeInput.Name = "TakingTimeInput";
             this.TakingTimeInput.PasswordChar = '\0';
@@ -129,10 +129,38 @@
             this.TakingTime.TabIndex = 16;
             this.TakingTime.Text = "Taking Time";
             // 
+            // BeforeMeal
+            // 
+            this.BeforeMeal.AutoSize = true;
+            this.BeforeMeal.Checked = true;
+            this.BeforeMeal.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.BeforeMeal.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.BeforeMeal.Location = new System.Drawing.Point(196, 164);
+            this.BeforeMeal.Margin = new System.Windows.Forms.Padding(2);
+            this.BeforeMeal.Name = "BeforeMeal";
+            this.BeforeMeal.Size = new System.Drawing.Size(92, 15);
+            this.BeforeMeal.TabIndex = 14;
+            this.BeforeMeal.Text = "Before Meal";
+            this.BeforeMeal.UseSelectable = true;
+            this.BeforeMeal.CheckedChanged += new System.EventHandler(this.BeforeMeal_CheckedChanged);
+            // 
+            // metroCheckBox1
+            // 
+            this.metroCheckBox1.AutoSize = true;
+            this.metroCheckBox1.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.metroCheckBox1.Location = new System.Drawing.Point(329, 164);
+            this.metroCheckBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.metroCheckBox1.Name = "metroCheckBox1";
+            this.metroCheckBox1.Size = new System.Drawing.Size(83, 15);
+            this.metroCheckBox1.TabIndex = 13;
+            this.metroCheckBox1.Text = "After Meal";
+            this.metroCheckBox1.UseSelectable = true;
+            this.metroCheckBox1.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
+            // 
             // metroDateTime2
             // 
             this.metroDateTime2.Location = new System.Drawing.Point(196, 90);
-            this.metroDateTime2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroDateTime2.Margin = new System.Windows.Forms.Padding(2);
             this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime2.Name = "metroDateTime2";
             this.metroDateTime2.Size = new System.Drawing.Size(242, 29);
@@ -141,7 +169,7 @@
             // metroDateTime1
             // 
             this.metroDateTime1.Location = new System.Drawing.Point(196, 55);
-            this.metroDateTime1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroDateTime1.Margin = new System.Windows.Forms.Padding(2);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(242, 29);
@@ -153,10 +181,10 @@
             // 
             // 
             this.MedicineNameInput.CustomButton.Image = null;
-            this.MedicineNameInput.CustomButton.Location = new System.Drawing.Point(236, 1);
-            this.MedicineNameInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MedicineNameInput.CustomButton.Location = new System.Drawing.Point(315, 1);
+            this.MedicineNameInput.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.MedicineNameInput.CustomButton.Name = "";
-            this.MedicineNameInput.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.MedicineNameInput.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.MedicineNameInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.MedicineNameInput.CustomButton.TabIndex = 1;
             this.MedicineNameInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -164,7 +192,7 @@
             this.MedicineNameInput.CustomButton.Visible = false;
             this.MedicineNameInput.Lines = new string[0];
             this.MedicineNameInput.Location = new System.Drawing.Point(196, 25);
-            this.MedicineNameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MedicineNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.MedicineNameInput.MaxLength = 32767;
             this.MedicineNameInput.Name = "MedicineNameInput";
             this.MedicineNameInput.PasswordChar = '\0';
@@ -244,7 +272,7 @@
             // 
             this.CancelButton.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.CancelButton.Location = new System.Drawing.Point(543, 314);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(115, 33);
             this.CancelButton.TabIndex = 2;
@@ -256,41 +284,13 @@
             // 
             this.AddNewButton.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.AddNewButton.Location = new System.Drawing.Point(35, 314);
-            this.AddNewButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddNewButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddNewButton.Name = "AddNewButton";
             this.AddNewButton.Size = new System.Drawing.Size(124, 33);
             this.AddNewButton.TabIndex = 3;
             this.AddNewButton.Text = "Add New";
             this.AddNewButton.UseSelectable = true;
             this.AddNewButton.Click += new System.EventHandler(this.AddNewButton_Click);
-            // 
-            // BeforeMeal
-            // 
-            this.BeforeMeal.AutoSize = true;
-            this.BeforeMeal.Checked = true;
-            this.BeforeMeal.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.BeforeMeal.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
-            this.BeforeMeal.Location = new System.Drawing.Point(196, 164);
-            this.BeforeMeal.Margin = new System.Windows.Forms.Padding(2);
-            this.BeforeMeal.Name = "BeforeMeal";
-            this.BeforeMeal.Size = new System.Drawing.Size(92, 15);
-            this.BeforeMeal.TabIndex = 14;
-            this.BeforeMeal.Text = "Before Meal";
-            this.BeforeMeal.UseSelectable = true;
-            this.BeforeMeal.CheckedChanged += new System.EventHandler(this.BeforeMeal_CheckedChanged);
-            // 
-            // metroCheckBox1
-            // 
-            this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
-            this.metroCheckBox1.Location = new System.Drawing.Point(329, 164);
-            this.metroCheckBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.metroCheckBox1.Name = "metroCheckBox1";
-            this.metroCheckBox1.Size = new System.Drawing.Size(83, 15);
-            this.metroCheckBox1.TabIndex = 13;
-            this.metroCheckBox1.Text = "After Meal";
-            this.metroCheckBox1.UseSelectable = true;
-            this.metroCheckBox1.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
             // 
             // Form5
             // 
@@ -300,9 +300,9 @@
             this.Controls.Add(this.AddNewButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.metroPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form5";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Text = "New";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.metroPanel1.ResumeLayout(false);

@@ -13,10 +13,10 @@ namespace peoples_heart
 {
     public partial class ExistingMedicine : Form
     {
-        public ExistingMedicine()
+        public ExistingMedicine(int patientId)
         {
             InitializeComponent();
-            metroGrid1.DataSource=new MedicineContext().GetMedicineS();
+            metroGrid1.DataSource=new MedicineContext().GetMedicinesByUid(patientId);
         }
     }
 }

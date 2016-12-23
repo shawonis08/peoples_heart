@@ -26,6 +26,24 @@ namespace Context
         }
 
 
+
+
+        public List<Medicine> GetMedicinesByUid(int id)
+        {
+            using (var context = new DataBaseContext())
+            {
+
+
+                return (from x in context.Medicines
+                                     where x.CustomerId == id
+                                     select x).ToList();
+
+              
+
+            }
+        }
+
+
         public List<Medicine> GetMedicineS()
         {
             using (var context = new DataBaseContext())
