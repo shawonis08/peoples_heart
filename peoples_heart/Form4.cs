@@ -32,7 +32,7 @@ namespace peoples_heart.Resources
             Alarm = new Timer {Interval = 1000};
             Alarm.Tick += Alarm_Tick;
             Alarm.Start();
-            notifyIcon1.ShowBalloonTip(2000, "Notification", "hhaa", ToolTipIcon.Info);
+          
 
         }
 
@@ -50,7 +50,7 @@ namespace peoples_heart.Resources
                 DateTime startDate = medicine.StartDate;
                 DateTime endDate = medicine.EndDate;
                 if (now < startDate || now > endDate) continue;
-                if (now.Second ==0 && now.Minute==33 && now.Hour%medicine.Interval == 0)
+                if (now.Second ==0 && now.Minute==5 && now.Hour%medicine.Interval == 0)
                 {
                     mediList += " "+medicine.Name;
                     time = true;
@@ -58,7 +58,7 @@ namespace peoples_heart.Resources
             }
             if (time)
             {
-                MessageBox.Show(mediList);
+                notifyIcon1.ShowBalloonTip(1000,"Notification",mediList,ToolTipIcon.Info);
             }
            
         }
