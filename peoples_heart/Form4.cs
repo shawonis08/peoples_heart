@@ -15,13 +15,16 @@ namespace peoples_heart.Resources
 {
     public partial class Form4 : MetroFramework.Forms.MetroForm
     {
+       
+
+
         private List<Medicine> medicines;
         private Timer Alarm;
         private Patient patient;
         private Form1 form1;
         public Form4(Patient validUser, Form1 form1)
         {
-
+            
             this.form1 = form1;
             patient = validUser; 
             InitializeComponent();
@@ -29,26 +32,35 @@ namespace peoples_heart.Resources
             Alarm = new Timer {Interval = 1000};
             Alarm.Tick += Alarm_Tick;
             Alarm.Start();
-
+            notifyIcon1.ShowBalloonTip(2000, "Notification", "hhaa", ToolTipIcon.Info);
 
         }
+
+     
+
+   
 
         private void Alarm_Tick(object sender, EventArgs e)
         {
             DateTime now= DateTime.Now;
-         
+            string mediList = "Time For";
+            bool time = false;
             foreach (var medicine in medicines)
             {
                 DateTime startDate = medicine.StartDate;
                 DateTime endDate = medicine.EndDate;
                 if (now < startDate || now > endDate) continue;
-                if (now.Minute==0 && now.Hour%medicine.Interval == 0)
+                if (now.Second ==0 && now.Minute==33 && now.Hour%medicine.Interval == 0)
                 {
-                    MessageBox.Show("Time for" + medicine.Name);
+                    mediList += " "+medicine.Name;
+                    time = true;
                 }
             }
-
-
+            if (time)
+            {
+                MessageBox.Show(mediList);
+            }
+           
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -71,5 +83,7 @@ namespace peoples_heart.Resources
             form1.Close();
             base.OnClosed(e);
         }
+
+        
     }
 }
