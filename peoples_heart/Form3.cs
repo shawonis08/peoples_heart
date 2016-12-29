@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Context;
 using Entity;
+using Tulpep.NotificationWindow;
 
 namespace peoples_heart.Resources
 {
@@ -44,10 +45,16 @@ namespace peoples_heart.Resources
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
             Patient validUser=new PatientContext().VerifyPatient(PatientNameInput.Text,PatientPinInput.Text);
+            PopupNotifier loginSuccess = new PopupNotifier();
+            loginSuccess.ContentText = "Welcome" + " "+PatientNameInput.Text;
+            loginSuccess.Popup();
 
             if (validUser==null)
             {
-                MessageBox.Show("Invalid User");
+                PopupNotifier userInvalid = new PopupNotifier();
+                userInvalid.ContentText = "Invalid User";
+                userInvalid.Popup();
+                //MessageBox.Show("Invalid User");
             }
             else
             {

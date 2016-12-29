@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Context;
 using Entity;
+using Tulpep.NotificationWindow;
 
 namespace peoples_heart.Resources
 {
@@ -50,7 +51,7 @@ namespace peoples_heart.Resources
                 DateTime startDate = medicine.StartDate;
                 DateTime endDate = medicine.EndDate;
                 if (now < startDate || now > endDate) continue;
-                if (now.Second ==0 && now.Minute==5 && now.Hour%medicine.Interval == 0)
+                if (now.Second ==0 && now.Minute==8 && now.Hour%medicine.Interval == 0)
                 {
                     mediList += " "+medicine.Name;
                     time = true;
@@ -84,6 +85,13 @@ namespace peoples_heart.Resources
             base.OnClosed(e);
         }
 
-        
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            PopupNotifier popLogOut = new PopupNotifier();
+            popLogOut.ContentText = "Succesfully Log Out";
+            popLogOut.Popup();
+            this.Hide();
+            new Form1().Show(this);
+        }
     }
 }

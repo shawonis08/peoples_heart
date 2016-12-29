@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Context;
 using Entity;
+using Tulpep.NotificationWindow;
 
 namespace peoples_heart.Resources
 {
@@ -50,11 +51,17 @@ namespace peoples_heart.Resources
                     patient.Age = PatientAgeInput.Text;
                     patient.Pin = RequestPinInput.Text;
                     new PatientContext().AddNewPatient(patient);
-                    MessageBox.Show(@"Success!");
+                    //MessageBox.Show(@"Success!");
+                    PopupNotifier confirmRegister = new PopupNotifier();
+                    confirmRegister.ContentText = "You are Successfully register.Remember your PIN Number.";
+                    confirmRegister.Popup();
                 }
                 else
                 {
-                    MessageBox.Show(@"Invalid Pin");
+                    PopupNotifier pinValidation = new PopupNotifier();
+                    pinValidation.ContentText = "Invalid Pin";
+                    pinValidation.Popup();
+                    //MessageBox.Show(@"Invalid Pin");
                 }
                
             }

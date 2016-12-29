@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Context;
 using Entity;
+using Tulpep.NotificationWindow;
 
 namespace peoples_heart.Resources
 {
@@ -43,6 +44,7 @@ namespace peoples_heart.Resources
         private void AddNewButton_Click(object sender, EventArgs e)
         {
             Medicine medicine = new Medicine();
+            PopupNotifier medicineAdd = new PopupNotifier();
             try
             {
                 medicine.Name = MedicineNameInput.Text;
@@ -52,7 +54,9 @@ namespace peoples_heart.Resources
                 medicine.CustomerId = patient.Id;
                 medicine.BeforeMeal = BeforeMeal.Checked;
                 new MedicineContext().AddnewMedicine(medicine);
-                MessageBox.Show("Added");
+                medicineAdd.ContentText =MedicineNameInput.Text+" "+"Added";
+                medicineAdd.Popup();
+                //MessageBox.Show("Added");
             }
             catch (Exception ex)
             {
