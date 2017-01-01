@@ -50,16 +50,22 @@ namespace peoples_heart.Resources
             {
                 DateTime startDate = medicine.StartDate;
                 DateTime endDate = medicine.EndDate;
-                if (now < startDate || now > endDate) continue;
-                if (now.Second ==0 && now.Minute==8 && now.Hour%medicine.Interval == 0)
-                {
-                    mediList += " "+medicine.Name;
-                    time = true;
-                }
+
+               
+                    if (now.Minute == 0 && now.Second == 0 && now.Hour % medicine.Interval == 0)
+                    {
+                        mediList += " " + medicine.Name;
+                        time = true;
+                    }
+                
+
+              
             }
             if (time)
             {
-                notifyIcon1.ShowBalloonTip(1000,"Notification",mediList,ToolTipIcon.Info);
+                PopupNotifier popLogOut = new PopupNotifier();
+                popLogOut.ContentText = mediList;
+                popLogOut.Popup();
             }
            
         }
@@ -87,9 +93,7 @@ namespace peoples_heart.Resources
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            PopupNotifier popLogOut = new PopupNotifier();
-            popLogOut.ContentText = "Succesfully Log Out";
-            popLogOut.Popup();
+            
             this.Hide();
             new Form1().Show(this);
         }
