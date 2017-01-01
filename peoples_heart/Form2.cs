@@ -53,40 +53,58 @@ namespace peoples_heart.Resources
 
 
             try
-            {   
-                if (!string.IsNullOrEmpty(RequestPinInput.Text) && RequestPinInput.Text.Equals(ConfirmPinInput.Text))
+            {
+                if (!string.IsNullOrEmpty(PatientNameInput.Text))
                 {
-                    if (RequestPinInput.Text.Length == 5)
+                    if (!string.IsNullOrEmpty(PatientAgeInput.Text))
                     {
-                        patient.Name = PatientNameInput.Text;
-                        patient.Age = PatientAgeInput.Text;
-                        patient.Pin = RequestPinInput.Text;
-                        new PatientContext().AddNewPatient(patient);
-                        //MessageBox.Show(@"Success!");
-                        PopupNotifier confirmRegister = new PopupNotifier();
-                        confirmRegister.ContentText = "You are Successfully register.Remember your PIN Number.";
-                        confirmRegister.Popup();
+                        if (!string.IsNullOrEmpty(RequestPinInput.Text) && RequestPinInput.Text.Equals(ConfirmPinInput.Text))
+                        {
+                            if (RequestPinInput.Text.Length == 5)
+                            {
+                                patient.Name = PatientNameInput.Text;
+                                patient.Age = PatientAgeInput.Text;
+                                patient.Pin = RequestPinInput.Text;
+                                new PatientContext().AddNewPatient(patient);
+                                //MessageBox.Show(@"Success!");
+                                PopupNotifier confirmRegister = new PopupNotifier();
+                                confirmRegister.ContentText = "You are Successfully Registered.Remember your PIN Number.";
+                                confirmRegister.Popup();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Password length should be 5.");
+                                RequestPinInput.Focus();
+                            }
+
+                        }
+                        else
+                        {
+                            PopupNotifier pinValidation = new PopupNotifier();
+                            pinValidation.ContentText = "Invalid Pin";
+                            pinValidation.Popup();
+                            //MessageBox.Show(@"Invalid Pin");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Password length should be 5.");
-                        RequestPinInput.Focus();
+                        MessageBox.Show(@"Please enter your age.");
+                        PatientAgeInput.Focus();
                     }
-                    
+
                 }
                 else
                 {
-                    PopupNotifier pinValidation = new PopupNotifier();
-                    pinValidation.ContentText = "Invalid Pin";
-                    pinValidation.Popup();
-                    //MessageBox.Show(@"Invalid Pin");
+                    MessageBox.Show(@"Please enter your name.");
+                    PatientNameInput.Focus();
                 }
-               
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        
+                
            
            
 
@@ -139,5 +157,14 @@ namespace peoples_heart.Resources
             }
         }
 
+        private void PatientAge_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PatientNameInput_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

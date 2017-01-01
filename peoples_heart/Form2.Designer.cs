@@ -75,7 +75,7 @@
             "Select Age"});
             this.PatientAgeInput.Location = new System.Drawing.Point(305, 111);
             this.PatientAgeInput.Name = "PatientAgeInput";
-            this.PatientAgeInput.Size = new System.Drawing.Size(131, 30);
+            this.PatientAgeInput.Size = new System.Drawing.Size(147, 30);
             this.PatientAgeInput.TabIndex = 10;
             this.PatientAgeInput.UseSelectable = true;
             this.PatientAgeInput.SelectedIndexChanged += new System.EventHandler(this.PatientAgeInput_SelectedIndexChanged);
@@ -181,6 +181,7 @@
             this.PatientNameInput.UseSelectable = true;
             this.PatientNameInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.PatientNameInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.PatientNameInput.Click += new System.EventHandler(this.PatientNameInput_Click);
             // 
             // ConfirmPin
             // 
@@ -216,6 +217,7 @@
             this.PatientAge.Size = new System.Drawing.Size(117, 25);
             this.PatientAge.TabIndex = 3;
             this.PatientAge.Text = "Patient Age :";
+            this.PatientAge.Click += new System.EventHandler(this.PatientAge_Click);
             // 
             // PatientName
             // 
@@ -256,7 +258,7 @@
             // 
             // showButton
             // 
-            this.showButton.Location = new System.Drawing.Point(549, 178);
+            this.showButton.Location = new System.Drawing.Point(560, 177);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(49, 22);
             this.showButton.TabIndex = 11;
@@ -268,6 +270,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(928, 476);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ConfirmButton);
