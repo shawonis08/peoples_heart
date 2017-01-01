@@ -68,7 +68,7 @@ namespace peoples_heart.Resources
                                 new PatientContext().AddNewPatient(patient);
                                 //MessageBox.Show(@"Success!");
                                 PopupNotifier confirmRegister = new PopupNotifier();
-                                confirmRegister.ContentText = "You are Successfully Registered.Remember your PIN Number.";
+                                confirmRegister.ContentText = PatientNameInput.Text+" "+"Successfully Registered."+ PatientNameInput.Text+" "+"Please Remember your PIN Number.";
                                 confirmRegister.Popup();
                             }
                             else
