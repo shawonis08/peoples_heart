@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using Context;
 using Entity;
 using Tulpep.NotificationWindow;
+using System.Data.SqlClient;
 
 namespace peoples_heart.Resources
 {
     public partial class Form2 : MetroFramework.Forms.MetroForm
     {
+        textToSpeech ts =new textToSpeech();
         int i;
         
         public Form2()
@@ -50,7 +52,37 @@ namespace peoples_heart.Resources
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
             Patient patient = new Patient();
+            List<String> columnData = new List<string>();
 
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection("Server=(localDB)/MSSQLLocalDB;"
+       + "Database=MedicineDatabse;"))
+                {
+                    string query = "SELECT Name FROM dbo.Patients";
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                //string item = reader.GetString(reader.GetOrdinal("Name"));
+                                columnData.Add(reader.GetString(2));
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
 
             try
             {
@@ -60,23 +92,32 @@ namespace peoples_heart.Resources
                     {
                         if (!string.IsNullOrEmpty(RequestPinInput.Text) && RequestPinInput.Text.Equals(ConfirmPinInput.Text))
                         {
-                            if (RequestPinInput.Text.Length == 5)
+                            foreach (var element in columnData)
                             {
-                                patient.Name = PatientNameInput.Text;
-                                patient.Age = PatientAgeInput.Text;
-                                patient.Pin = RequestPinInput.Text;
-                                new PatientContext().AddNewPatient(patient);
-                                //MessageBox.Show(@"Success!");
-                                PopupNotifier confirmRegister = new PopupNotifier();
-                                confirmRegister.ContentText = PatientNameInput.Text+" "+"Successfully Registered."+ PatientNameInput.Text+" "+"Please Remember your PIN Number.";
-                                confirmRegister.Popup();
+                                if (PatientNameInput.Text == element)
+                                {
+                                    MessageBox.Show("This user is already resistered. Please use an unique name.");
+                                }
+                                else
+                                {
+                                    if (RequestPinInput.Text.Length == 5)
+                                    {
+                                        patient.Name = PatientNameInput.Text;
+                                        patient.Age = PatientAgeInput.Text;
+                                        patient.Pin = RequestPinInput.Text;
+                                        new PatientContext().AddNewPatient(patient);
+                                        //MessageBox.Show(@"Success!");
+                                        PopupNotifier confirmRegister = new PopupNotifier();
+                                        confirmRegister.ContentText = PatientNameInput.Text + " " + "Successfully Registered." + PatientNameInput.Text + " " + "Please Remember your PIN Number.";
+                                        confirmRegister.Popup();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Password length should be 5.");
+                                        RequestPinInput.Focus();
+                                    }
+                                }
                             }
-                            else
-                            {
-                                MessageBox.Show("Password length should be 5.");
-                                RequestPinInput.Focus();
-                            }
-
                         }
                         else
                         {
@@ -102,19 +143,23 @@ namespace peoples_heart.Resources
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-        
-                
-           
-           
-
-
+            }  
 
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void CancelButton_hv(object sender, EventArgs e)
+        {
+            ts.speak((sender as Button).Text);
+        }
+
+        private void ConfirmButton_hv(object sender, EventArgs e)
+        {
+            ts.speak((sender as Button).Text);
         }
 
         private void PatientAgeInput_Click(object sender, EventArgs e)

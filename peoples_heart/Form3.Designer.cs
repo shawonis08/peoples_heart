@@ -55,6 +55,7 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 11;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
             // PatientNameInput
             // 
@@ -62,10 +63,10 @@
             // 
             // 
             this.PatientNameInput.CustomButton.Image = null;
-            this.PatientNameInput.CustomButton.Location = new System.Drawing.Point(505, 1);
+            this.PatientNameInput.CustomButton.Location = new System.Drawing.Point(379, 1);
             this.PatientNameInput.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PatientNameInput.CustomButton.Name = "";
-            this.PatientNameInput.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.PatientNameInput.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.PatientNameInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.PatientNameInput.CustomButton.TabIndex = 1;
             this.PatientNameInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -94,10 +95,10 @@
             // 
             // 
             this.PatientPinInput.CustomButton.Image = null;
-            this.PatientPinInput.CustomButton.Location = new System.Drawing.Point(505, 1);
+            this.PatientPinInput.CustomButton.Location = new System.Drawing.Point(379, 1);
             this.PatientPinInput.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PatientPinInput.CustomButton.Name = "";
-            this.PatientPinInput.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.PatientPinInput.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.PatientPinInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.PatientPinInput.CustomButton.TabIndex = 1;
             this.PatientPinInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -155,6 +156,7 @@
             this.ConfirmButton.Text = "Confirm";
             this.ConfirmButton.UseSelectable = true;
             this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
+            this.ConfirmButton.MouseHover += new System.EventHandler(this.ConfirmButton_hv);
             // 
             // CancelButton
             // 
@@ -167,6 +169,7 @@
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseSelectable = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.MouseHover += new System.EventHandler(this.CancelButton_hv);
             // 
             // Form3
             // 
@@ -179,7 +182,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form3";
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Log In";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();

@@ -64,6 +64,7 @@
       <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -117,6 +118,7 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
+    <Compile Include="textToSpeech.cs" />
     <EmbeddedResource Include="ExistingMedicine.resx">
       <DependentUpon>ExistingMedicine.cs</DependentUpon>
     </EmbeddedResource>

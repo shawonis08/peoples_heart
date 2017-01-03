@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.ExistingButton = new MetroFramework.Controls.MetroButton();
             this.NewButton = new MetroFramework.Controls.MetroButton();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,14 +49,24 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(199, 101);
+            this.metroPanel1.Location = new System.Drawing.Point(199, 76);
             this.metroPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(545, 282);
+            this.metroPanel1.Size = new System.Drawing.Size(570, 304);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 11;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(230, 226);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 4;
+            this.metroButton1.Text = "Log Out";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // ExistingButton
             // 
@@ -102,16 +112,6 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
             this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(230, 226);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "Log Out";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // Form4
             // 

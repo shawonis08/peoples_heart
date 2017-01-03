@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.showButton = new MetroFramework.Controls.MetroButton();
             this.PatientAgeInput = new MetroFramework.Controls.MetroComboBox();
             this.ConfirmPinInput = new MetroFramework.Controls.MetroTextBox();
             this.RequestPinInput = new MetroFramework.Controls.MetroTextBox();
@@ -39,7 +40,6 @@
             this.PatientName = new MetroFramework.Controls.MetroLabel();
             this.CancelButton = new MetroFramework.Controls.MetroButton();
             this.ConfirmButton = new MetroFramework.Controls.MetroButton();
-            this.showButton = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,16 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 11;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            // 
+            // showButton
+            // 
+            this.showButton.Location = new System.Drawing.Point(560, 177);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(49, 22);
+            this.showButton.TabIndex = 11;
+            this.showButton.Text = "Show";
+            this.showButton.UseSelectable = true;
+            this.showButton.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // PatientAgeInput
             // 
@@ -243,6 +253,7 @@
             this.CancelButton.Text = "Cancel ";
             this.CancelButton.UseSelectable = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.MouseHover += new System.EventHandler(this.CancelButton_hv);
             // 
             // ConfirmButton
             // 
@@ -255,16 +266,7 @@
             this.ConfirmButton.Text = "Confirm";
             this.ConfirmButton.UseSelectable = true;
             this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
-            // 
-            // showButton
-            // 
-            this.showButton.Location = new System.Drawing.Point(560, 177);
-            this.showButton.Name = "showButton";
-            this.showButton.Size = new System.Drawing.Size(49, 22);
-            this.showButton.TabIndex = 11;
-            this.showButton.Text = "Show";
-            this.showButton.UseSelectable = true;
-            this.showButton.Click += new System.EventHandler(this.metroButton1_Click);
+            this.ConfirmButton.MouseHover += new System.EventHandler(this.ConfirmButton_hv);
             // 
             // Form2
             // 
@@ -278,7 +280,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Register";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransparencyKey = System.Drawing.Color.Azure;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.metroPanel1.ResumeLayout(false);

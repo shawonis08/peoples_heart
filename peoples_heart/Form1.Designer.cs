@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -49,6 +50,7 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
             // metroButton2
             // 
@@ -60,6 +62,7 @@
             this.metroButton2.Text = "Log In";
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.metroButton2.MouseHover += new System.EventHandler(this.metroButton2_MouseHover);
             // 
             // metroButton1
             // 
@@ -71,6 +74,7 @@
             this.metroButton1.Text = "Register";
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
+            this.metroButton1.MouseHover += new System.EventHandler(this.metroButton1_MouseHover);
             // 
             // metroPanel2
             // 
@@ -89,14 +93,17 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 476);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "People\'s Heart";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.metroPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

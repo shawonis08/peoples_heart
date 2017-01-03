@@ -26,5 +26,7 @@ namespace peoples_heart.Properties
                 return defaultInstance;
             }
         }
+
+        public string DBConnectionString { get; internal set; }
     }
 }
